@@ -1,0 +1,103 @@
+/*Menu*/
+nav {
+  background-color: #dc960a;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+
+/* Clases del index */
+:root {
+    --box-w: 100px;
+    --box-h: 100px;
+    --gap: 24px;
+   }
+ 
+body {
+    background: #fafafa;
+    color: #222;
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    padding: 40px;
+    }
+h1 {
+    margin: 0 0 20px; }
+    /* Contenidor amb flex-wrap */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    }
+    /* Targeta (columna) */
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    }
+.card h2 {
+    margin: 0 0 8px;
+    font-size: 1.05rem;
+    color: #333;
+    }
+    /* Quadre base */
+.box {
+    background: #1b2831;
+    height: var(--box-h);
+    transition: all 0.6s ease;
+    width: var(--box-w);
+    }
+    /* 1) Color */
+.box.color {
+    background-color: #b6463a;
+    transition: background-color 0.8s ease;
+    }
+.box.color:hover {
+    background-color: #2ecc71;
+    }
+    /* 2) Mida */
+.box.mida {
+    background: #9b59b6;
+    transition: width 0.8s ease, height 0.8s ease;
+    }
+.box.mida:hover {
+    width: 160px;
+    height: 160px;
+    }
+    /* 3) Posició (fem servir transform per no desmuntar el layout) */
+.box.posicio {
+    background-color: #f1c40f;
+    transition: transform 0.8s ease-in-out;
+    }
+.box.posicio:hover {
+    transform: translateX(80px);
+    }
+    /* 4) Opacitat */
+.box.opacitat {
+    background-color: #1abc9c;
+    opacity: 1;
+    transition: opacity 0.8s ease;
+    }
+.box.opacitat:hover {
+    opacity: 0.3;
+    }
+
+/* Clases de la galería */
+
+
+
+/* Clases Guia-estil */
