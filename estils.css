@@ -36,22 +36,23 @@ nav ul li a {
 }
 
 .card {
-        display: flex;
-        flex-direction: column;
-        width: 220px;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-      }
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+ }
 
 .card h2 {
-        margin: 0 0 8px;
-        font-size: 1.05rem;
-        color: #333;
-        padding: auto;
-      }
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  color: #333;
+  padding: auto;
+  }
 
 /* Clases del index */
+/* Cambio de imagen */
 .box.imatge {
     width: 220px;
     height: 439px;
@@ -73,6 +74,51 @@ nav ul li a {
 .titulo-cambia:hover h2::after {
     content: "Guitarra electrica";
 }
+
+/* Medida */
+.card-mida {
+  overflow: hidden;
+  transition: 0.8s ease;
+}
+.box.mida {
+  width: 220px;
+  height: 439px;
+  background: url("assets/img/bateria.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: width 0.8s ease, height 0.8s ease, background-size 0.8s ease;
+  }
+.card-mida:hover .box.mida{
+  width: 500px;
+  height: 400px;
+  }
+/* posicion */
+
+.box.posicio {
+  width: 220px;
+  height: 439px;
+  background:url("assets/img/bajo.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.8s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  }
+.box.posicio:hover {
+transform: translateX(190px);
+  }
+.card-posicio .texto {
+  position: relative;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: white;
+  opacity: 0;
+  z-index: 1;
+  transition: 0.8s ease;
+}
+
+
 /* Clases de la galería */
 
 
