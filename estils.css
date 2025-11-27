@@ -20,82 +20,59 @@ nav ul li a {
   transition: 0.3s;
 }
 
-
-/* Clases del index */
+/*otras clases */
 :root {
-    --box-w: 100px;
-    --box-h: 100px;
-    --gap: 24px;
-   }
- 
-body {
-    background: #fafafa;
-    color: #222;
-    font-family: system-ui, sans-serif;
-    margin: 0;
-    padding: 40px;
-    }
-h1 {
-    margin: 0 0 20px; }
-    /* Contenidor amb flex-wrap */
+        --box-w: 100px;
+        --box-h: 100px;
+        --gap: 24px;
+      }
+
 .grid {
     display: flex;
     flex-wrap: wrap;
     gap: var(--gap);
-    }
-    /* Targeta (columna) */
-.card {
-    display: flex;
-    flex-direction: column;
-    width: 220px;
-    }
-.card h2 {
-    margin: 0 0 8px;
-    font-size: 1.05rem;
-    color: #333;
-    }
-    /* Quadre base */
-.box {
-    background: #1b2831;
-    height: var(--box-h);
-    transition: all 0.6s ease;
-    width: var(--box-w);
-    }
-    /* 1) Color */
-.box.color {
-    background-color: #b6463a;
-    transition: background-color 0.8s ease;
-    }
-.box.color:hover {
-    background-color: #2ecc71;
-    }
-    /* 2) Mida */
-.box.mida {
-    background: #9b59b6;
-    transition: width 0.8s ease, height 0.8s ease;
-    }
-.box.mida:hover {
-    width: 160px;
-    height: 160px;
-    }
-    /* 3) Posició (fem servir transform per no desmuntar el layout) */
-.box.posicio {
-    background-color: #f1c40f;
-    transition: transform 0.8s ease-in-out;
-    }
-.box.posicio:hover {
-    transform: translateX(80px);
-    }
-    /* 4) Opacitat */
-.box.opacitat {
-    background-color: #1abc9c;
-    opacity: 1;
-    transition: opacity 0.8s ease;
-    }
-.box.opacitat:hover {
-    opacity: 0.3;
-    }
+    justify-content: center;
+    padding: 60px;
+}
 
+.card {
+        display: flex;
+        flex-direction: column;
+        width: 220px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      }
+
+.card h2 {
+        margin: 0 0 8px;
+        font-size: 1.05rem;
+        color: #333;
+        padding: auto;
+      }
+
+/* Clases del index */
+.box.imatge {
+    width: 220px;
+    height: 439px;
+    background-image: url("assets/img/guitarra_acustica.jpg");
+    background-size: cover; 
+    background-position: center;
+    transition: 0.3s;
+}
+
+.titulo-cambia:hover .box.imatge {
+    background-image: url("assets/img/guitarra_electrica.jpg");
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.titulo-cambia h2::after {
+    content: "Guitarra acustica";
+}
+.titulo-cambia:hover h2::after {
+    content: "Guitarra electrica";
+}
 /* Clases de la galería */
 
 
