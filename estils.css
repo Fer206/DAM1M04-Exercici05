@@ -38,6 +38,7 @@ nav ul li a {
 .card {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: auto;
   padding: 20px;
   border-radius: 8px;
@@ -51,6 +52,16 @@ nav ul li a {
   padding: auto;
   }
 
+.notas_musicales {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: 40px auto;
+  background: linear-gradient(to bottom, #e0f6ff, #a7e5fd);
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 /* Clases del index */
 /* Cambio de imagen */
 .box.imatge {
@@ -136,12 +147,12 @@ transform: translateX(190px);
   /* Ondas expansivas */
 .ondas {
   position: absolute;
-  top: 50%;
+  top: 300px;
   left: 50%;
-  width: 180px;
-  height: 180px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  background: rgba(0, 150, 255, 0.25);
+  background: rgb(0, 149, 255);
   animation: expandir 2s ease-out infinite;
   z-index: 1;
 }
@@ -163,4 +174,43 @@ transform: translateX(190px);
     opacity: 0;
   }
 }
+
+/* notas que se mueven */
+.nota {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: #6000dd;
+  border-radius: 50%;
+  animation: bounceAndSpin 4s infinite;
+}
+
+@keyframes bounceAndSpin {
+  0% {
+    color: #6000dd;
+    transform: translate(0, 0) rotate(180deg) scale(1);
+  }
+  20% {
+    color: #2500dd;
+    transform: translate(-50px, -50px) rotate(90deg) scale(1.2);
+  }
+  40% {
+    color: #00addd;
+    transform: translate(50px, 50px) rotate(180deg) scale(1);
+  }
+  60% {
+    color: #00ddaa;
+    transform: translate(-20px, -80px) rotate(270deg) scale(0.8);
+  }
+  80% {
+    color: #ddaa00;
+    transform: translate(-50px, 50px) rotate(360deg) scale(1);
+  }
+  100% {
+    color: #6000dd;
+    transform: translate(0, 0) rotate(360deg) scale(1);
+  }
+}
+
 /* Clases Guia-estil */
