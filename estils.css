@@ -22,10 +22,11 @@ nav ul li a {
 
 /*otras clases */
 :root {
-        --box-w: 100px;
-        --box-h: 100px;
-        --gap: 24px;
-      }
+  --box-w: 100px;
+  --box-h: 100px;
+  --gap: 24px;
+  --box: 100px;
+}
 
 .grid {
     display: flex;
@@ -212,5 +213,100 @@ transform: translateX(190px);
     transform: translate(0, 0) rotate(360deg) scale(1);
   }
 }
+/* Animacion scroll */
+.stage {
+  min-height: 150vh;
+  padding: 40vh 0;
+  position: relative;
+}
 
+.row {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  min-height: 40vh;
+  position: relative; /* flueix amb la pàgina */
+}
+
+.track {
+  background: rgba(255,255,255,0.6);
+  border-radius: 8px;
+  height: var(--box);
+  outline: 2px dashed #ccc;
+  position: relative;
+  width: min(90vw, 800px);
+}
+
+.elementos {
+  width: var(--box);
+  height: var(--box);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0;
+}
+
+.elementos.caja1 {
+  background-image: url("assets/img/disco_f.jpg");
+  left: 0;
+}
+
+.elementos.caja2 {
+  background-image: url("assets/img/disco_g.jpg");
+  right: 0;
+}
+
+
+@keyframes moveToRight {
+  from {
+    transform: translateX(0) rotate(0deg);
+  }
+  to {
+    transform: translateX(calc(min(90vw, 800px) - var(--box))) rotate(360deg);
+  }
+}
+
+@keyframes moveToLeft {
+  from {
+    transform: translateX(0) rotate(0deg);
+  }
+  to {
+    transform: translateX(calc(-1 * (min(90vw, 800px) - var(--box)))) rotate(-360deg);
+  }
+}
+
+
+@supports (animation-timeline: view()) {
+  .elementos.caja1 {
+    animation: moveToRight linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 100%;
+  }
+
+  .elementos.caja2 {
+    animation: moveToLeft linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 100%;
+  }
+
+  .fallbackNote {
+    display: none;
+  }
+}
+
+@supports not (animation-timeline: view()) {
+  .fallbackNote {
+    background: rgba(255,255,255,0.9);
+    border-radius: 4px;
+    color: #c00;
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+  }
+}
 /* Clases Guia-estil */
