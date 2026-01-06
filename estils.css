@@ -1,13 +1,20 @@
 /*Menu*/
 nav {
-  background-color: #dc960a;
   padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 999; 
+
+  background: rgb(22, 5, 255);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.9);
+
 }
 
 nav ul {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 6px 10px;
   display: flex;
   gap: 20px;
 }
@@ -15,9 +22,9 @@ nav ul {
 nav ul li a {
   color: rgb(255, 255, 255);
   text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  transition: 0.3s;
+  position: relative;
+  padding: 6px 12px;
+  transition: color 0.3s ease;
 }
 
 /*otras clases */
