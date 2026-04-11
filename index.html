@@ -4,29 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Musica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="estils.css">
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="galeria.html">Galeria</a></li>
-            <li><a href="guia-estil.html">Guia</a></li>
+            <li><a href="index.html"><span class="material-icons-outlined">home</span>Inicio</a></li>
+            <li><a href="galeria.html"><span class="material-icons-outlined">collections</span>Galeria</a></li>
+            <li><a href="guia-estil.html"><span class="material-icons-outlined">info</span>Guia</a></li>
         </ul>
     </nav>
+    <header class="hero">
+        <h1>Explora la musica</h1>
+        <p>Vive tu experiencia </p>
+        <a href="#" class="btn">
+        <span class="material-icons-outlined">play_arrow</span> Inicio
+        </a>
+    </header>
 
+    <nav class="secundario">
+      <ul>
+        <li><a href="#guitarra">Guitarra</a></li>
+        <li><a href="#bateria">Bateria</a></li>
+        <li><a href="#bajo">Bajo</a></li>
+      </ul>
+    </nav>
+        
     <section class="grid">
-      <article class="card titulo-cambia">
-        <h2></h2>
+      <article class="card titulo-cambia t-linear">
+        <h2>Guitarra</h2>
         <div class="box imatge"></div>
       </article>  
-      <article class="card card-mida">
+      <article class="card card-mida t-ease-in">
         <h2>Bateria</h2>
         <div class="box mida"></div>
       </article>
-      <article class="card">
+      <article class="card t-ease-out">
         <h2>Bajo electrico</h2>
-        <div class="box posicio"></div>
+        <div class="box posicio"></div></div>
     </section>
 
 </body>

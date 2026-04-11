@@ -4,15 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guía de Estilo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="estils.css">
 </head>
 <body>
   <nav>
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="galeria.html">Galeria</a></li>
-            <li><a href="guia-estil.html">Guia</a></li>
+            <li><a href="index.html"><span class="material-icons-outlined">home</span>Inicio</a></li>
+            <li><a href="galeria.html"><span class="material-icons-outlined">collections</span>Galeria</a></li>
+            <li><a href="guia-estil.html"><span class="material-icons-outlined">info</span>Guia</a></li>
         </ul>
     </nav>
+    <header class="hero">
+        <h1>Guía de Estilo</h1>
+        <p>Esta guía de estilo proporciona pautas para el diseño y la 
+            presentación de contenido en nuestro sitio web. Asegúrate de 
+            seguir estas recomendaciones para mantener una apariencia coherente 
+            y profesional en todas las páginas.</p>
+    </header>
+    <section class="grid">
+        <article class="card tipos">
+            <h2>Tipografía</h2>
+            <h1>H1 Montserrat 900</h1>
+            <h2>H2 Montserrat 700</h2>
+            <h3>H3 Montserrat 400</h3>
+            <p>Cuerpo de texto en Roboto 400. <strong>Negrita en Roboto 700.</strong> <small>Ligera en Roboto 300.</small></p>
+            <div class="variaciones">
+                <p>Line-height: 1.8 | Letter-spacing: 1px (Ejemplo de legibilidad)</p>
+            </div>
+        </article>
+
+        <article class="card">
+            <h2>Iconografía y Alineación</h2>
+            <div class="baseline-demo">
+                <p>
+                    <span class="material-icons-outlined">audiotrack</span>
+                    Texto alineado a la baseline con icono.
+                </p>
+            </div>
+            <hr style="width:100%; margin:20px 0; opacity:0.2;">
+            <div class="iconos-demo">
+                <p><span class="material-icons-outlined fill-icon">star</span> Icono con FILL: 1</p>
+                <p><span class="material-icons-outlined thick-icon">settings</span> Icono con WGHT: 700</p>
+                <p><span class="material-icons-outlined large-icon">rocket_launch</span> Icono con OPSZ: 48</p>
+            </div>
+        </article>
+
+        <article class="card">
+            <h2>Botones e Interacción</h2>
+            <button class="btn">
+                <span class="material-icons-outlined">download</span> Descargar PDF
+            </button>
+            <p style="margin-top:20px;">
+                <a href="#" class="secundario" style="padding:10px; text-decoration:none; display:inline-flex; align-items:center; gap:5px;">
+                    <span class="material-icons-outlined">arrow_forward</span> Enlace con Hover
+                </a>
+            </p>
+        </article>
+
+        <article class="card" style="width: 100%; max-width: 800px;">
+            <h2>Paleta de Colores</h2>
+            <table class="color-table">
+                <thead>
+                    <tr>
+                        <th>Muestra</th>
+                        <th>HEX</th>
+                        <th>RGB</th>
+                        <th>HSL</th>
+                        <th>RGBA (Alpha)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="background-color: #2f00ff;"></td>
+                        <td>#2f00ff</td>
+                        <td>rgb(47, 0, 255)</td>
+                        <td>hsl(251, 100%, 50%)</td>
+                        <td>rgba(47, 0, 255, 0.5)</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #00ff44;"></td>
+                        <td>#00ff44</td>
+                        <td>rgb(0, 255, 68)</td>
+                        <td>hsl(136, 100%, 50%)</td>
+                        <td>rgba(0, 255, 68, 0.5)</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #ff5722;"></td>
+                        <td>#ff5722</td>
+                        <td>rgb(255, 87, 34)</td>
+                        <td>hsl(14, 100%, 57%)</td>
+                        <td>rgba(255, 87, 34, 0.5)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </section>
+
+    </section>
 </body>
 </html>
