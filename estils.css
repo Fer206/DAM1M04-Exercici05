@@ -187,20 +187,7 @@ nav ul li a:hover, nav ul li a.active {
 .box.posicio:hover::after {
   transform: translateX(100%);
 }
-/*.box.posicio{
-  width: 220px;
-  height: 439px;
-  background:url("assets/img/bajo.jpg");
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.8s ease-in-out;
-  position: relative;
-  overflow: hidden;
-  }
-.box.posicio:hover {
-transform: translateX(190px);
-  }
-*/
+
 .t-linear { transition-timing-function: linear; }
 .t-ease-in { transition-timing-function: ease-in; }
 .t-ease-out { transition-timing-function: ease-out; }
